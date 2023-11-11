@@ -3,9 +3,11 @@ Host EC2 nginx
 
 *IMPORTANT: make sure you can SSH to EC2 BEFORE do these steps*
 
-*Gen key and copy to remote host 
+*Gen key and copy to remote host*
+```
 ssh-keygen
-ssh-copy-id -i id_rsa.pub ubuntu@ip*
+ssh-copy-id -i id_rsa.pub ubuntu@ip
+```
 
 1:
 Set up your directory with the following directory layout:
