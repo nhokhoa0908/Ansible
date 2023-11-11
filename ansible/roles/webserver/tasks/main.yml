@@ -1,0 +1,32 @@
+---
+- name: Update YUM cache
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install Nginx
+  yum:
+    name: nginx
+    state: present
+
+- name: Ensure /var/www/html directory exists
+  file:
+    path: /var/www/html
+    state: directory
+    mode: '0755'
+
+- name: Copy index file to remote hosts
+  copy:
+    src: /home/nhokhoa/Desktop/ansible/roles/webserver/files/ansible-index.html
+    dest: /var/www/html/ansible-index.html
+
+- name: Copy nginx.conf to remote host
+  copy:
+    src: /home/nhokhoa/Desktop/ansible/roles/webserver/templates/nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+- name: Start Nginx service
+  systemd_service:
+    name: nginx
+    enabled: yes
+    state: started
