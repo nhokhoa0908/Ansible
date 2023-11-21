@@ -27,6 +27,16 @@ ansible-project/
             └── nginx.conf
 ```
 
+```
+mkdir ansible-project
+cd ansible-project
+touch ansible.cfg inventory.ini playbook.yml
+mkdir -p roles/webserver/tasks roles/webserver/files roles/webserver/templates
+touch roles/webserver/tasks/main.yml
+touch roles/webserver/files/ansible-index.html
+touch roles/webserver/templates/nginx.conf
+```
+
 2: Update the file ansible.cfg to configure the inventory file location to point to the inventory.ini in the created directory.
 
 3: Update the file inventory.ini to configure the IP address and private key location to connect to the remote host.
