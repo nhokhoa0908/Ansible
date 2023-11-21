@@ -8,7 +8,9 @@ Host EC2 nginx
 ssh-keygen
 ssh-copy-id -i id_rsa.pub ubuntu@ip
 ```
-
+```
+nano /etc/ansible/hosts
+```
 1:
 Set up your directory with the following directory layout:
 
