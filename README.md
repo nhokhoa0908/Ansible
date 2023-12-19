@@ -60,7 +60,9 @@ Start Nginx service via systemd_service module
 ![image](https://github.com/nhokhoa0908/ansible/assets/112317781/b412b959-d3a8-40f9-aad8-a007375c5971)
 
 7: Run your playbook with ansible-playbook command.
-```ansible-playbook playbook.yml```
+```
+ansible-playbook playbook.yml
+```
 
 8: Open your browser and access your web server via your remote host IP.
 ![image](https://github.com/nhokhoa0908/ansible/assets/112317781/8283cc5f-dc5d-485c-8cfc-0153b87249f5)
